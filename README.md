@@ -13,7 +13,7 @@ En esta práctica se ha profundizado en el motor de físicas 3D de Unity, trabaj
 ## Situaciones
 
 ### Situación 1
-El plano no es un objeto físico, el cubo sí y la esfera no. El plano y la esfera solo tienen `Collider`, mientras que el cubo tiene `Rigidbody` dinámico. El cubo cae por gravedad, choca contra el plano y queda en reposo y la esfera, al no tener `Rigidbody`, permanece inmóvil aunque el cubo la atraviese.
+El plano no es un objeto físico, el cubo sí y la esfera no. El plano y la esfera solo tienen `Collider`, mientras que el cubo tiene `Rigidbody` dinámico. El cubo cae por gravedad, choca contra el plano y queda en reposo y la esfera, al no tener `Rigidbody`, permanece inmóvil.
 
 ![situacion1](./gifs/situacion1.gif)
 
@@ -33,22 +33,22 @@ El plano es un objeto físico, el cubo es físico y la esfera es física. Todos 
 ![situacion4](./gifs/situacion4.gif)
 
 ### Situación 5
-El plano es cinemático, el cubo es físico y la esfera es física con 10 veces más masa que el cubo. La esfera, al tener más masa, desplaza al cubo con facilidad al colisionar, mientras el plano permanece fijo como suelo.
+El plano es cinemático, el cubo es físico y la esfera es física con 10 veces más masa que el cubo. La esfera, al tener más masa, le cuesta más moverse, mientras el plano permanece fijo como suelo.
 
 ![situacion5](./gifs/situacion5.gif)
 
 ### Situación 6
-El plano es cinemático, el cubo es físico y la esfera es física con 100 veces más masa que el cubo. La esfera aplasta y desplaza al cubo de forma mucho más contundente que en la situación anterior, dejando claro el efecto de la masa en las colisiones.
+El plano es cinemático, el cubo es físico y la esfera es física con 100 veces más masa que el cubo. La esfera tiene más complicaciones al moverse porque pesa más incluso que en la situación anterior, dejando claro el efecto de la masa en las colisiones.
 
 ![situacion6](./gifs/situacion6.gif)
 
 ### Situación 7
-El plano es físico, el cubo es físico y la esfera es física con fricción. La esfera lleva aplicado un `Physic Material` con fricción alta, por lo que al deslizarse sobre el plano o chocar contra el cubo pierde velocidad rápidamente en lugar de desplazarse libremente.
+El plano es físico, el cubo es físico y la esfera es física con fricción. La esfera lleva aplicado un `Physic Material` con fricción alta, por lo que al deslizarse sobre el plano o chocar contra el cubo pierde velocidad rápidamente en lugar de desplazarse libremente, aunque no se ve del todo claro porque no se especificaba que el plano fuera cinemático así que cae por la gravedad.
 
 ![situacion7](./gifs/situacion7.gif)
 
 ### Situación 8
-El plano es cinemático, el cubo es físico y la esfera no es física pero es Trigger. La esfera tiene `Collider` con `Is Trigger`, de modo que el cubo la atraviesa sin colisionar físicamente pero se dispara `OnTriggerEnter`.
+El plano es cinemático, el cubo es físico y la esfera no es física pero es Trigger. La esfera tiene `Collider` con `Is Trigger`, de modo que el cubo la atraviesa sin colisionar físicamente pero se dispararía `OnTriggerEnter`.
 
 ![situacion8](./gifs/situacion8.gif)
 
